@@ -9,11 +9,11 @@ public class Word{
 
 
     //引数によって配列の要素数を決定し、インスタンス生成
-    public Word(int length){
-        word = new String[length];
-        meaning = new String[length];
-        arrayWord = new ArrayList<>();
-        arrayMean =  new ArrayList<>();
+    public Word(int length) {
+        this.word = new String[length];
+        this.meaning = new String[length];
+        this.arrayWord = new ArrayList<>();
+        this.arrayMean =  new ArrayList<>();
     }
 
     //=======以下、配列の場合のメソッド=======
@@ -22,30 +22,30 @@ public class Word{
     //例外を拾ったら、呼び出し元にエラーを投げ返す
     public void setWord(String str,int num) throws ArrayIndexOutOfBoundsException {
         int point = str.indexOf("　");
-        word[num] = str.substring(0,point);
-        meaning[num] = str.substring(point+1);
+        this.word[num] = str.substring(0,point);
+        this.meaning[num] = str.substring(point+1);
     }
 
     //表示用メソッド「printWord」、戻り値はString型
     public String printWord(int num){
-        String str = "単語：" + word[num] + "　意味：" + meaning[num];
+        String str = "単語：" + this.word[num] + "　意味：" + this.meaning[num];
         return str;
     }
 
     //=======以下、ArrayListの場合のメソッド=======
     public void setArrayWord(String str) throws ArrayIndexOutOfBoundsException{
         int point = str.indexOf("　");
-        arrayWord.add(str.substring(0,point));
-        arrayMean.add(str.substring(point+1));
+        this.arrayWord.add(str.substring(0,point));
+        this.arrayMean.add(str.substring(point+1));
     }
 
     public String printArrayWord(int num){
-        String str =  "単語：" + arrayWord.get(num) + "　意味：" + arrayMean.get(num);
+        String str =  "単語：" + this.arrayWord.get(num) + "　意味：" + this.arrayMean.get(num);
         return str;
     }
 
     public int sizeArray(){
-        return arrayWord.size();
+        return this.arrayWord.size();
     }
 
 }
