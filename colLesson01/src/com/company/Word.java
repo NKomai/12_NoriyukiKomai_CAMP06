@@ -7,13 +7,16 @@ public class Word{
     public ArrayList<String> arrayWord;
     public ArrayList<String> arrayMean;
 
+    public Word(){
+        this.arrayWord = new ArrayList<>();
+        this.arrayMean =  new ArrayList<>();
+    }
+
 
     //引数によって配列の要素数を決定し、インスタンス生成
     public Word(int length) {
         this.word = new String[length];
         this.meaning = new String[length];
-        this.arrayWord = new ArrayList<>();
-        this.arrayMean =  new ArrayList<>();
     }
 
     //=======以下、配列の場合のメソッド=======

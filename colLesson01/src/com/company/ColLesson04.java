@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ColLesson04 {
     public static void main(String[] args) {
         //インスタンスの生成。以降、ArrayListをいじるので引数はなんでも良い
-        Word library = new Word(1);
+        Word library = new Word();
 
         //スキャナー準備
         Scanner scanner = new Scanner(System.in);
